@@ -1,0 +1,22 @@
+{
+  "name": "automatedtestingnew",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Enik12/AutomatedTestingBasicsJS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Enik12/AutomatedTestingBasicsJS/issues"
+  },
+  "homepage": "https://github.com/Enik12/AutomatedTestingBasicsJS#readme",
+  "devDependencies": {
+    "fs-extra": "^11.1.0"
+  }
+}
