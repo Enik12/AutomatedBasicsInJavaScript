@@ -34,22 +34,32 @@ console.log(stringArray);
 
 let friendsArray = ["Elena", "Almaz", "Aijamal", "Maksim", "Olga", ];
 
-for(let i = 0; i < friendsArray.length; i++){
+const word = "hello";
 
-    console.log(friendsArray[i] + "hello");
+friendsArray.forEach((element, index) => {
 
-};
+    friendsArray[index] = word + " " + element;
+
+});
+
+console.log(friendsArray);
 
 
 
 //4
 //Convert numeric array to Boolean
 
-let numbersArray = [1, 3, 32, 145, 1, 56, 54, 7, 9, 10, 20, -5, ];
+const numbersArray = [1, 3, 32, 145, 1, 56, 54, 7, 9, 10, 20, -5, ];
 
-let newBoolean = Boolean(numbersArray);
+let boolArray = [];
 
-console.log(newBoolean);
+for(let i = 0; i <= numbersArray.length; i++){
+
+    boolArray.push(Boolean(numbersArray[i]));
+
+}
+
+console.log(boolArray);
 
 
 //5
@@ -75,22 +85,21 @@ console.log(newArr);
 //7
 //Write a function that takes two parameters - an array and a number and outputs the index of an array element equal to a number
 
-let littleArr = [1, "hello", "cat", 3, true, 1, 34, 432,];
+const myArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,];
 
-function findIndex(array, number){
+function getIndex(arr, n){
+    
+    let index = arr.findIndex(item => item == n);
 
-    let i = 0; 
-
-    while(i < array.length){
-        if(i == number){
-            console.log(i);
-        }
-        i++;
+    if(index == -1){                                  //if findIndex method doesn't find element equal to condition it will return -1
+        console.log("Array doesn't have this number");
+    }else{
+        console.log("Index of number " + n + " is: " + index);
     };
-
+    
 };
 
-findIndex(littleArr, 4);
+getIndex(myArr , 10);
 
 
 //8
@@ -107,20 +116,23 @@ while(a < 10){
 //9
 //Implement a loop that prints prime numbers to the console
 
-//простое число делится только на 1 и на само себя, больше 1
+function findPrimeNumber(n){
 
-let num = 25
+    for(let i = 2; i < n; i++){
 
-Prime: for(let i = 2; i <= num;  i++){   //label for continue
+        if (i != 2 && i % 2 == 0) continue;     //I excluded numbers that are divisible by 2, 3, 5 and 7 without a remainder
+        if (i != 3 && i % 3 == 0) continue;     //but I leaved 2 because it is a prime number
+        if (i != 5 && i % 5 == 0) continue;     //also I leaved numbers: 3, 5 and 7
+        if (i != 7 && i % 7 == 0) continue;     //I'm not sure that this is a right way to find prime numbers but the code works
 
-    for(let j = 2; j < i; j++){
-
-        if (i % j == 0 ) continue Prime;
-
+        console.log(i);
     };
+    
 
-    console.log(i);
 };
+
+findPrimeNumber(100);
+
 
 
 //10
